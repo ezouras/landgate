@@ -1,0 +1,6 @@
+<!-- TODO center text horizontally and vertically and style color white -->
+<section [class.padding-mobile]="(isMobile$ | async)"  class="home-content">
+ <div [ngClass]="(isMobile$ | async) ? 'mobile-text' : 'center'">
+        <h1 [class.title]="!(isMobile$ | async)" class="title">LandGate Test</h1>
+    </div>
+</section>

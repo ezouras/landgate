@@ -1,0 +1,12 @@
+<!-- TODO: make the footer a 3 column responsive layout -->
+<footer class="flex-it">
+<div class="w-100">
+  <ng-container *ngIf="isMobile$ | async; else wideScreen">
+  <app-footer-mobile></app-footer-mobile>
+  </ng-container>
+  <ng-template #wideScreen>
+    <app-footer-wide></app-footer-wide>
+  </ng-template>
+</div>
+</footer>
+

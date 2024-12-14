@@ -1,0 +1,22 @@
+<div class="card-container" *ngIf="people$ | async as people; else loading">
+  <mat-card *ngFor="let person of people; index as i" class="example-card">
+    <mat-icon>account_circle</mat-icon>
+    <div class="card-container">
+    <mat-card-header>
+        <mat-card-title>{{person.firstName}} {{person.lastName}}</mat-card-title>
+        <mat-card-subtitle>Age: {{person.age}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{person.workTitle}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="userEdit(person,i)" mat-button>Edit</button>
+    </mat-card-actions>
+  </div>
+  </mat-card>
+</div>
+<ng-template #loading>
+  <div class="spin-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

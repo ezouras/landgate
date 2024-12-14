@@ -1,0 +1,19 @@
+.header-wide-container{
+  display:flex;
+  justify-content: space-around;
+  font-size:1rem;
+}
+a{
+  padding:.25rem;
+}
+.join-link{
+  color:white;
+  opacity:.8;
+  transition: opacity .7s;
+}
+
+.join-link:hover{
+  font:bolder;
+  cursor: pointer;
+  opacity:1;
+}

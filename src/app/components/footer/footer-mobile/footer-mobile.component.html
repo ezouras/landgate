@@ -1,0 +1,30 @@
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel #extPanel1 [expanded]="steps.step1 === 0" (opened)="setStep('step1',0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <a href="#">About</a>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+       <div mat-menu-item><a href="#">Learn More</a></div>
+       <div mat-menu-item><a [routerLink]="['people']">People</a></div>
+       <div mat-menu-item><a href="#">Careers</a></div>
+  </mat-expansion-panel>
+  <mat-expansion-panel #extPanel2 [expanded]="steps.step2 === 0" (opened)="setStep('step2',0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <a href="#">Resources</a>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+       <div mat-menu-item><a href="#">Docs</a></div>
+       <div mat-menu-item><a href="#">Blog</a></div>
+  </mat-expansion-panel>
+  <mat-expansion-panel #extPanel3 [expanded]="steps.step3 === 0" (opened)="setStep('step3',0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <a href="#">Contact Menu</a>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+       <div mat-menu-item><a href="#">Help</a></div>
+       <div mat-menu-item><a href="#">Sales</a></div>
+  </mat-expansion-panel>
+</mat-accordion>

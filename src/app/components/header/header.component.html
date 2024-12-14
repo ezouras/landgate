@@ -1,0 +1,10 @@
+<!-- TODO: make the header a responsive navigation menu with responsive layout -->
+<!-- Create a link to the people component/page -->
+<header>
+  <ng-container *ngIf="isMobile$ | async; else wideScreen">
+    <app-header-mobile (openJoinDialogEvent)="openJoinDialog()"></app-header-mobile>
+  </ng-container>
+  <ng-template #wideScreen>
+    <app-header-wide (openJoinDialogEvent)="openJoinDialog()"></app-header-wide>
+  </ng-template>
+</header>

@@ -1,0 +1,44 @@
+<form #userForm="ngForm">
+<div class="form-container">
+  <div class="form-group">
+    <label for="fName">First Name</label>
+    <input type="text" class="form-control" id="fName" required [(ngModel)]="person.firstName" name="fName" #fName="ngModel">
+    <div [ngClass]="{'hide': fName.valid || fName.pristine}"
+     class="alert alert-danger">
+      First name is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lName">Last Name</label>
+    <input type="text"  class="form-control" id="lName" required
+          [(ngModel)]="person.lastName" name="lName" #lName="ngModel">
+    <div [ngClass]="{'hide': lName.valid || lName.pristine}"
+          class="alert alert-danger">
+           Last name is required
+   </div>
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text"  class="form-control" id="age" required
+          [(ngModel)]="person.age" name="age" #age="ngModel">
+    <div [ngClass]="{'hide': age.valid || age.pristine}"
+          class="alert alert-danger">
+           Age is required
+   </div>
+  </div>
+
+  <div class="form-group">
+    <label for="power">Work Title</label>
+    <input type="text"  class="form-control" id="wTitle" required
+    [(ngModel)]="person.workTitle" name="wTitle" #wTitle="ngModel">
+    <div [ngClass]="{'hide': wTitle.valid || wTitle.pristine}"
+      class="alert alert-danger">
+      Work title is required
+    </div>
+  </div>
+  <div class="button-container">
+    <button type="button" class="btn btn-default" (click)="saveUser()" [disabled]="!userForm.form.valid">Save</button>
+</div>
+</div>
+</form>

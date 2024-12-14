@@ -1,0 +1,29 @@
+.app-container{
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  font-family: 'Comfortaa', cursive;
+  /* flex:0 tells the divs to go as large as
+  they are set to go nothing more.  flex:1 makes
+  all dives fill the space */
+}
+.app-header{
+  width:100%;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.app-router{
+  width:100%;
+  /*height:auto;*/
+  /* will fillspace with this div*/
+  flex: 1;
+}
+
+.app-footer{
+  width:100%;
+  flex:0;
+  /* instead of this, I could have just put the
+  container to 0 and the div children would autmatically
+  just use the space they need*/
+}

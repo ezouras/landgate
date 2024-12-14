@@ -1,0 +1,15 @@
+input{
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+mat-dialog-actions{
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: space-between;
+}
+button{
+  border-radius: 10px;
+  background-color:#424242!important;
+}
+
